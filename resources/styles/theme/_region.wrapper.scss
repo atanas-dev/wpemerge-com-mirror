@@ -1,0 +1,11 @@
+/* ------------------------------------------------------------ *\
+  Wrapper
+\* ------------------------------------------------------------ */
+
+.wrapper-holder { width: 100%; display: flex; min-height: 100vh; position: relative; }
+.wrapper { width: 100%; min-height: 100vh; display: flex; flex-direction: column; position: relative; padding-top: $header-height; }
+
+@include mq-tablet-portrait() {
+  .wrapper { padding-top: calc(#{$header-height + 20px}); }
+  .wrapper.nav-active { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 50; }
+}

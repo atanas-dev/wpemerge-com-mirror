@@ -1,0 +1,60 @@
+/* ------------------------------------------------------------ *\
+  Base
+\* ------------------------------------------------------------ */
+
+body { min-width: 320px; background: $white; font-family: $font-barlow; font-size: $font-size-base; line-height: $line-height-base; color: $black; font-weight: 300; }
+
+a { color: inherit; text-decoration: underline; transition: color .3s, background .3s, opacity .3s, visibility .3s; }
+
+a:hover,
+a[href^="tel"] { text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { margin-bottom: calc(#{$line-height-base}em / 2); }
+
+h1 { font-size: 90px; font-family: $font-barlow-semi-condensed; font-weight: 600; line-height: 1; }
+h2 { font-size: 60px; font-family: $font-barlow-semi-condensed; font-weight: 600; line-height: 1.2; }
+h3 { font-size: 32px; font-family: $font-barlow-condensed; font-weight: 600; line-height: 1; }
+h4 { font-size: 32px; font-family: $font-barlow-condensed; font-weight: 600; line-height: 1.2; }
+h5 { font-size: 22px; line-height: 1.2; }
+h6 { font-size: 16px; line-height: 1.2; }
+
+@include mq-mobile() {
+  h1 { font-size: 60px; }
+  h2 { font-size: 40px; }
+  h3 { font-size: 21px; }
+  h4 { font-size: 19px; }
+  h5 { font-size: 18px; }
+  h6 { font-size: 14px; }
+}
+
+p,
+ul,
+ol,
+dl,
+hr,
+table,
+blockquote { margin-bottom: #{$line-height-base}em; }
+
+h1[class],
+h2[class],
+h3[class],
+h4[class],
+h5[class],
+h6[class],
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+table:last-child,
+blockquote:last-child { margin-bottom: 0; }

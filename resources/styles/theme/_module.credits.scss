@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------ *\
+  Credits
+\* ------------------------------------------------------------ */
+
+.credits {
+  text-align: center;
+  padding: 10px 0;
+
+  p {
+    font-size: 18px;
+    color: #4c4c4c;
+
+    a {
+      text-decoration: none;
+      color: $blue;
+    }
+  }
+}
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+  .credits p a:hover {
+    text-decoration: underline;
+  }
+}
+
+@include mq-tablet-portrait() {
+  .credits p {
+    font-size: 16px;
+  }
+}

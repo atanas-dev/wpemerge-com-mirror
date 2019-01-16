@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+  Slider Testimonials
+\* ------------------------------------------------------------ */
+
+.slider--testimonials {
+  position: relative;
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  .slider__actions {
+    div {
+      margin-top: 0;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background: none;
+      background-size: cover;
+
+      &:after {
+        font-family: 'Font Awesome 5 Free';
+        color: $blue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 900;
+        font-size: 20px;
+        margin: 0;
+        transition: left .3s;
+      }
+    }
+
+    .swiper-button-prev {
+      left: -115px;
+
+      &:after {
+        content: '\f053';
+      }
+    }
+
+    .swiper-button-next {
+      right: -115px;
+
+      &:after {
+        content: '\f054';
+      }
+    }
+  }
+}
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+  .slider--testimonials .slider__actions .swiper-button-prev:hover:after {
+    left: 35%;
+  }
+  .slider--testimonials .slider__actions .swiper-button-next:hover:after {
+    left: 65%;
+  }
+}
+
+@include mq-small-desktop() {
+  .slider--testimonials {
+    padding: 0 35px;
+  }
+  .slider--testimonials .slider__actions .swiper-button-prev {
+    left: 0;
+  }
+  .slider--testimonials .slider__actions .swiper-button-next {
+    right: 0;
+  }
+}

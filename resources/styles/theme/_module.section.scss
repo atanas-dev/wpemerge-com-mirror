@@ -1,0 +1,86 @@
+/* ------------------------------------------------------------ *\
+  Section
+\* ------------------------------------------------------------ */
+
+.section { padding: 60px 0; }
+.section .section__head { text-align: center; margin-bottom: 57px; }
+
+@include mq-tablet-portrait() {
+  .section .section__head { margin-bottom: 30px; }
+}
+
+/* ------------------------------------------------------------ *\
+  Section FAQ
+\* ------------------------------------------------------------ */
+
+.section--faq { padding: 122px 0 80px; position: relative; z-index: 1; }
+.section--faq .section__bg { position: absolute; top: 50%; left: 0; width: 100%; transform: translateY(-50%); background-position: center center; background-repeat: no-repeat; pointer-events: none; z-index: -1; }
+
+@include mq-tablet-portrait() {
+  .section--faq { padding: 80px 0; }
+}
+
+@include mq-tablet-portrait() {
+  .section--faq { padding: 40px 0; }
+}
+
+/* ------------------------------------------------------------ *\
+  Section Testimonials
+\* ------------------------------------------------------------ */
+
+.section--testimonials { padding: 160px 0 180px; position: relative; z-index: 1; }
+.section--testimonials .section__bg { position: absolute; top: 0; left: 50%; width: 1623px; max-width: 90%; height: 389px; background-position: center center; z-index: -1; background-repeat: no-repeat; pointer-events: none; background-size: 100% auto; transform: translateX(-50%); }
+.section--testimonials .section__head { margin-bottom: 99px; }
+.section--testimonials .section__head h2 { font-size: 50px; font-family: $font-barlow-condensed; font-weight: 600; }
+
+@include mq-tablet-portrait() {
+  .section--testimonials  { padding: 100px 0 120px; }
+}
+
+@include mq-tablet-portrait() {
+  .section--testimonials { padding: 40px 0; }
+  .section--testimonials .section__head { margin-bottom: 40px; }
+  .section--testimonials .section__head h2 { font-size: 40px; }
+}
+
+/* ------------------------------------------------------------ *\
+  Section Subscribe
+\* ------------------------------------------------------------ */
+
+.section-subscribe { background: $blue; position: relative; text-align: center; padding: 90px 0 97px; color: $white; }
+
+@include mq-tablet-portrait() {
+  .section-subscribe { padding: 40px 0; }
+}
+
+/* ------------------------------------------------------------ *\
+  Section Title
+\* ------------------------------------------------------------ */
+
+.section-title { padding: 94px 0 10px; text-align: center; }
+.section-title h3 { font-family: $font-barlow-semi-condensed; font-weight: 300; margin: 0; padding-bottom: 39px; position: relative; }
+.section-title h3:after { content: ''; width: 50px; height: 1px; background: $blue-lighter; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+
+@include mq-tablet-portrait() {
+  .section-title { padding: 50px 0 10px; }
+}
+
+/* ------------------------------------------------------------ *\
+  Section Articles
+\* ------------------------------------------------------------ */
+
+.section--articles { padding: 60px 0 87px; }
+
+@include mq-tablet-portrait() {
+  .section--articles { padding: 40px 0 60px; }
+}
+
+/* ------------------------------------------------------------ *\
+  Section Article Single
+\* ------------------------------------------------------------ */
+
+.section-article-single { padding: 82px 0 72px; }
+
+@include mq-tablet-portrait() {
+  .section-article-single { padding: 40px 0; }
+}

@@ -1,0 +1,41 @@
+/* ------------------------------------------------------------ *\
+    Vendor
+\* ------------------------------------------------------------ */
+
+@import './vendor/*.scss';
+
+/* ------------------------------------------------------------ *\
+    Settings
+\* ------------------------------------------------------------ */
+
+@import '~@styles/shared/_config.scss';
+@import '~@styles/shared/_variables.scss';
+@import '~@styles/shared/_editor.scss';
+@import './_variables.scss';
+@import './_sprite.scss';
+
+/* ------------------------------------------------------------ *\
+	Fonts
+\* ------------------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css?family=Barlow:200,300,500,700|Barlow+Semi+Condensed:300,600|Barlow+Condensed:300,600,700');
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+/* ------------------------------------------------------------ *\
+	Plugins
+\* ------------------------------------------------------------ */
+
+@import '~swiper/dist/css/swiper.css';
+@import '~prismjs/themes/prism-coy.css';
+@import '~prismjs/plugins/line-numbers/prism-line-numbers.css';
+
+/* ------------------------------------------------------------ *\
+    Theme
+\* ------------------------------------------------------------ */
+
+@import '_generic*.scss';
+@import '_region*.scss';
+@import '_module*.scss';
+@import '_theme*.scss';
+
+@import '~prism-themes/themes/prism-ghcolors.css';

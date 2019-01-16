@@ -1,0 +1,10 @@
+/* ------------------------------------------------------------ *\
+  Bar
+\* ------------------------------------------------------------ */
+
+.bar { background: $blue-light; padding: 15px 0 17px; }
+.bar .bar__inner { display: flex; align-items: center; justify-content: space-between; }
+
+@include mq-tablet-portrait() {
+  .bar .bar__inner { display: block; }
+}

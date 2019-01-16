@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------ *\
+  Nav
+\* ------------------------------------------------------------ */
+
+.nav { font-family: $font-barlow-semi-condensed; font-size: 16px; }
+
+.nav a { display: block; text-decoration: none; font-weight: 600; line-height: 2; }
+
+.nav > ul > li { display: inline-block; vertical-align: middle; position: relative; }
+.nav > ul > li + li { margin-left: 37px; }
+
+.nav {
+  @include with-dropdown();
+
+  & > ul > li ul {
+    background: $white;
+    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, .1);
+
+    border-bottom: 2px solid $blue;
+    border-radius: 12px;
+    background-size: 1px 100%;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+  .nav li:hover > a { color: $blue; }
+}
+
+@include mq-tablet-portrait() {
+  .nav { border-top: 3px solid $blue; border-bottom: 3px solid $blue; position: fixed; top: 0; left: -100%; width: 100%; height: 100vh; z-index: 60; background: $white; text-align: center; padding: 40px 0; font-size: 24px; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: left .4s, opacity .4s, visibility .4s; }
+
+  .nav > ul { width: 100%; }
+  .nav > ul > li { display: block; }
+  .nav a { line-height: 1.3; }
+  .nav > ul > li + li { margin: 25px 0 0; }
+
+  .wrapper.nav-active .nav { left: 0; opacity: 1; visibility: visible; }
+}
+
+/* ------------------------------------------------------------ *\
+  Nav Secondary
+\* ------------------------------------------------------------ */
+
+.nav-secondary { font-weight: 300; color: $gray; position: relative; z-index: 10; }
+.nav-secondary a { text-decoration: none; display: block; font-family: $font-barlow-semi-condensed; position: relative; }
+
+.nav-secondary li { position: relative; }
+.nav-secondary li:hover > a { color: #b6b6b6; }
+.nav-secondary > ul { font-size: 0; }
+
+.nav-secondary > ul > li { font-size: 14px; display: inline-block; vertical-align: middle; }
+.nav-secondary > ul > li > a { padding: 8px 0; }
+.nav-secondary > ul > li + li { margin-left: 40px; }
+
+.nav-secondary {
+  @include with-dropdown();
+
+  & > ul > li ul {
+    background: $blue-light;
+    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, .1);
+  }
+}

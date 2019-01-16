@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ *\
+  Subscribe
+\* ------------------------------------------------------------ */
+
+.subscribe p { font-weight: 200; font-size: 18px; letter-spacing: .015em; color: rgba(255, 255, 255, .7); }
+.subscribe form { margin-bottom: 20px; }
+
+.subscribe .subscribe__label { font-family: $font-barlow-semi-condensed; font-weight: 600; font-size: 60px; line-height: 1; display: block; margin-bottom: 35px; }
+
+.subscribe .subscribe__field { display: inline-block; width: 366px; height: 54px; background: $white; border-radius: 5px; padding: 0 23px; font-family: $font-barlow; font-weight: 200; font-size: 16px; letter-spacing: .015em; color: #4c4c4c; border: none; }
+
+.subscribe .subscribe__btn { display: inline-block; height: 54px; min-width: 178px; font-family: $font-barlow-semi-condensed; font-weight: 600; font-size: 18px; color: $white; appearance: none; background: #445deb; border: 2px solid #445deb; border-radius: 5px; margin-left: 10px; transition: background .3s, color .3s; }
+.subscribe .subscribe__btn svg path { fill: $white; transition: fill .3s; }
+.subscribe .subscribe__btn span { display: inline-block; vertical-align: middle; margin-left: 3px; }
+
+.subscribe .subscribe__controls { display: flex; justify-content: center; }
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+  .subscribe .subscribe__btn:hover { background: $white; color: #445deb; }
+  .subscribe .subscribe__btn:hover svg path { fill: #445deb; }
+}
+
+@include mq-tablet-portrait() {
+  .subscribe .subscribe__controls { display: block; }
+  .subscribe .subscribe__btn { width: 100%; margin: 20px 0 0; }
+  .subscribe .subscribe__field { width: 100%; }
+  .subscribe .subscribe__label { font-size: 40px; }
+}

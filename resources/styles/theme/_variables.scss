@@ -1,0 +1,115 @@
+$font-barlow: 'Barlow', sans-serif;
+$font-barlow-condensed: 'Barlow Condensed', sans-serif;
+$font-barlow-semi-condensed: 'Barlow Semi Condensed', sans-serif;
+
+$font-size-base: 16px;
+$line-height-base: 1.625;
+
+$header-height: 100px;
+$shell-max-width: 1640px;
+$shell-medium: 1170px;
+$shell-small: 820px;
+$shell-gutter: 20px;
+
+$responsive-xxs: 374px;
+$responsive-xs: 767px;
+$responsive-sm: 1023px;
+$responsive-md: 1420px;
+
+$white: #fff;
+$black: #000;
+$blue: #5e75ff;
+$blue-light: #f5f8ff;
+$blue-lighter: #d2daef;
+$gray: #737373;
+$gray-light: #b3b3b3;
+
+@mixin mq-mobile-portrait() {
+  @media (max-width: $responsive-xxs) {
+    @content;
+  }
+}
+
+@mixin mq-mobile() {
+  @media (max-width: $responsive-xs) {
+    @content;
+  }
+}
+
+@mixin mq-tablet-portrait() {
+  @media (max-width: $responsive-sm) {
+    @content;
+  }
+}
+
+@mixin mq-small-desktop() {
+  @media (max-width: $responsive-md) {
+    @content;
+  }
+}
+
+@mixin mq-retina() {
+  @media (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin with-dropdown() {
+  & > ul > li ul {
+    position: absolute;
+    z-index: 2;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px 0;
+    width: 160px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s, top .3s;
+  }
+
+  & li.has-children > a:after { content: '\f078'; font-family: 'Font Awesome 5 Free'; font-weight: 900; font-size: 11px; color: $blue; display: inline-block; margin-left: 9px; position: relative; }
+
+  & li.current > a { color: $blue; }
+
+  & li:hover > ul { top: 100%; opacity: 1; visibility: visible; }
+
+  @include mq-tablet-portrait() {
+    & {
+      margin-bottom: 15px;
+
+      ul.menu {
+        li {
+          margin: 0;
+
+          a {
+            font-size: 22px;
+            line-height: 250%;
+          }
+
+          ul.sub-menu {
+            opacity: 1;
+            transition: none;
+            visibility: visible;
+            position: static;
+            left: auto;
+            top: auto;
+            transform: none;
+            width: auto;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+            background: $blue-light;
+
+            li {
+              a {
+                font-size: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+/* ------------------------------------------------------------ *\
+  Accordion
+\* ------------------------------------------------------------ */
+
+.accordion {
+  border: 1px solid $blue-lighter;
+  border-radius: 4px;
+}
+
+.accordion .accordion__section + .accordion__section {
+  border-top: 1px solid $blue-lighter;
+}
+
+.accordion .accordion__head {
+  padding: 25px 50px 28px 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.accordion .accordion__head h3 {
+  transition: color .3s;
+}
+
+.accordion .accordion__head:after {
+  content: '\f107';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  color: $blue;
+  position: absolute;
+  top: 23px;
+  right: 30px;
+  font-size: 24px;
+}
+
+.accordion .accordion__body {
+  display: none;
+  border-top: 1px solid $blue-lighter;
+  background: $blue-light;
+  padding: 33px 65px 47px 50px;
+}
+
+.accordion .accordion__body p {
+  font-size: 18px;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, .7);
+  letter-spacing: .013em;
+  margin-bottom: 17px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.accordion .accordion__section.expanded .accordion__head:after {
+  content: '\f106';
+}
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+  .accordion .accordion__head:hover h3 {
+    color: $blue;
+  }
+}
+
+@include mq-tablet-portrait() {
+  .accordion .accordion__head {
+    padding: 20px 50px 20px 20px;
+  }
+  .accordion .accordion__head:after {
+    top: 12px;
+  }
+
+  .accordion .accordion__body {
+    padding: 20px 25px 20px;
+  }
+  .accordion .accordion__body p {
+    font-size: 16px;
+  }
+}

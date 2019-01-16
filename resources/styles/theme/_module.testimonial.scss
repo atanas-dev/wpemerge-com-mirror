@@ -1,0 +1,66 @@
+/* ------------------------------------------------------------ *\
+  Testimonial
+\* ------------------------------------------------------------ */
+
+.testimonial {
+  height: 100%;
+  padding: 36px 50px 39px;
+  border: 1px solid $blue-lighter;
+  border-radius: 14px;
+  background: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+
+  blockquote {
+    flex-grow: 1;
+    font-family: $font-barlow;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.625;
+    color: rgba(0, 0, 0, .7);
+    margin-bottom: 18px;
+  }
+
+  .testimonial__author {
+    display: flex;
+    align-items: center;
+
+    &-avatar {
+      min-width: 60px;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &-content {
+      padding-left: 18px;
+    }
+
+    h5 {
+      font-family: $font-barlow-condensed;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    h6 {
+      font-family: $font-barlow;
+      font-weight: 200;
+      letter-spacing: .015em;
+      color: #4c4c4c;
+    }
+
+  }
+}
+
+@include mq-tablet-portrait() {
+  .testimonial {
+    padding: 25px 20px;
+  }
+}

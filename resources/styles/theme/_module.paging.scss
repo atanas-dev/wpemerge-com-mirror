@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------ *\
+  Paging
+\* ------------------------------------------------------------ */
+
+.paging { display: flex; align-items: center; justify-content: center; padding: 19px 0; font-family: $font-barlow-condensed; font-weight: 300; font-size: 18px; color: $black; line-height: 1.2; }
+.paging ul { list-style: none outside none; margin: 0 42px; }
+.paging ul .current { font-weight: 600; color: $blue; }
+.paging li { display: inline-block; vertical-align: middle; }
+.paging li + li { margin-left: 29px; }
+.paging a { text-decoration: none; }
+
+.paging .paging-prev,
+.paging .paging-next { font-size: 16px; color: $blue; position: relative; left: 0; transition: left .3s; }
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active), (-moz-touch-enabled: 0), (hover) {
+  .paging ul a:hover { color: $blue; }
+
+  .paging .paging-prev:hover { left: -3px; }
+  .paging .paging-next:hover { left: 3px; }
+}
+
+@include mq-tablet-portrait() {
+  .paging ul { margin: 0 30px; }
+  .paging li + li { margin-left: 20px; }
+}
