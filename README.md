@@ -2,7 +2,7 @@
 
 This is a mirror of the first released version of [https://wpemerge.com/](https://wpemerge.com/) to serve as an example of WP Emerge in the wild.
 
-There are plans for a tutorial series which will be about creating a site from scratch which will be a much better example of how to use WP Emerge.
+There are plans for a tutorial series on creating a site from scratch which will be a much better example of how to use WP Emerge.
 
 # Dirty laundry disclosure
 
